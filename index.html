@@ -79,6 +79,62 @@ document.querySelector('#newclient').addEventListener('click', (e)=>{
 document.querySelector('#viewbill').addEventListener('click', (e)=>{
   window.open('findTransactions.html', '_self')
 })
+
+window.onload=function(){
+  //create database and tables if not existing;
+
+
+
+
+var comm1 = 'CREATE TABLE IF NOT EXISTS BILLNUM ("num"	INTEGER NOT NULL,PRIMARY KEY("num"));'
+var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
+
+db.transaction(function (tx){
+  tx.executeSql(comm1, [], function(tx, results){console.log('done')}, function(tx, e){console.log(e)})
+})
+
+var comm2 = 'CREATE TABLE IF NOT EXISTS "transactions" ("BillNum"	TEXT NOT NULL,"ClientName"	TEXT NOT NULL,"Date"	TEXT NOT NULL,"Time"	TEXT NOT NULL,"VehicleNo"	TEXT NOT NULL,"GRNo" TEXT NOT NULL,"Items"	TEXT NOT NULL,"Amount"	INTEGER,PRIMARY KEY("BillNum"));'
+
+var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
+
+db.transaction(function (tx){
+  tx.executeSql(comm2, [], function(tx, results){console.log('done')}, function(tx, e){console.log(e)})
+})
+
+var comm3 = 'CREATE TABLE IF NOT EXISTS "CLIENTS" ("Name"	TEXT NOT NULL,"Address"	INTEGER NOT NULL,"State"	TEXT NOT NULL,"GSTIN"	TEXT NOT NULL,PRIMARY KEY("Name"))';
+
+var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
+
+db.transaction(function (tx){
+  tx.executeSql(comm3, [], function(tx, results){console.log('done')}, function(tx, e){console.log(e)})
+})
+
+
+var comm4 = 'SELECT * FROM BILLNUM'
+
+var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
+
+db.transaction(function (tx){
+  tx.executeSql(comm4, [], function(tx, results){console.log('done')
+  if (results.rows.length==0){
+    var comm5 = "insert into billnum values (0);"
+
+    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
+
+  db.transaction(function (tx){
+  tx.executeSql(comm5, [], function(tx, results){console.log('done inserted')}, function(tx, e){console.log(e)})
+})
+
+
+
+  }
+
+}, function(tx, e){console.log(e)})
+})
+
+
+
+}
 </script>
 </body>
 </html>

@@ -46,7 +46,7 @@ document.querySelector('#findTrans').addEventListener('click', (e)=>{
     console.log(start_date, end_date)
 
     var comm4 = "SELECT * FROM TRANSACTIONS WHERE date between '"+start_date+"' and '"+end_date+"' ORDER BY BillNum;"
-    var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
+    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
     db.transaction(function (tx) {
         tx.executeSql(comm4, [], function (tx, results) {
             console.log(results.rows);
@@ -154,7 +154,7 @@ document.querySelector('#findTrans').addEventListener('click', (e)=>{
                 var gstin_dict={};
                 var nni=0;
                     var comm5 = 'SELECT * FROM CLIENTS WHERE Name IN '+client_name_arr+';'
-                    var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
+                    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
                     db.transaction(function (tx) {
                         tx.executeSql(comm5, [], function (tx, results1) {
 

@@ -10,8 +10,8 @@ document.querySelector('#clientForm').addEventListener('submit', (e) => {
   
   e.preventDefault()
 
-  var command = 'INSERT INTO CLIENTS VALUES ('+'"'+formObj['ClientID']+'"'+','+'"'+formObj['Name']+'"'+','+'"'+formObj['Address']+'"'+','+'"'+formObj['State']+'"'+','+'"'+formObj['GSTIN']+'"'+');'
-  var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
+  var command = 'INSERT INTO CLIENTS VALUES ("'+formObj['Name']+'"'+','+'"'+formObj['Address']+'"'+','+'"'+formObj['State']+'"'+','+'"'+formObj['GSTIN']+'"'+');'
+  var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
   db.transaction(function (tx) {
     tx.executeSql(command, [], function (tx, results) {
       document.querySelector('#output').innerHTML='Client Registered Successfully!';

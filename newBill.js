@@ -105,7 +105,7 @@ document.querySelector('#calculate').addEventListener('click', (e)=>{
     var client_name = document.querySelector('#client').value.toString();
 
     var comm5 = 'SELECT * FROM CLIENTS WHERE Name="'+client_name+'";';
-    var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
+    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024);
 
 
     db.transaction(function (tx){
@@ -213,7 +213,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
     if(isValid){
     // store in database
         var comm_test = 'SELECT * FROM TRANSACTIONS WHERE BillNum="'+billnum+'";'
-        var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
+        var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
 
         db.transaction(function (tx) {
             tx.executeSql(comm_test, [], function (tx, results) {
@@ -230,7 +230,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
                  var commd2 = 'UPDATE TRANSACTIONS SET ClientName="'+client_name+'", Date="'+final_date+'", Time="'+final_time+'", VehicleNo="'+vehicleno+'", GRNo="'+grno+'", Items="'+items+'", Amount='+amnt.toString()+' WHERE BillNum="'+billnum+'";'
                  console.log(commd2);
              }
-             var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
+             var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
              db.transaction(function (tx) {
                  tx.executeSql(commd2, [], function (tx, results) {
                      console.log('done')
@@ -249,7 +249,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
 
     //increment bill number counter in database
     var comm3 = 'UPDATE BILLNUM SET num='+parseInt(billnum)+' WHERE num='+parseInt(billnum-1)+';';
-    var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
+    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
     db.transaction(function (tx) {
         tx.executeSql(comm3, [], function (tx, results) {
          console.log('done')
@@ -301,7 +301,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
       //PRINT
 
     var comm5 = 'SELECT * FROM CLIENTS WHERE Name="'+client_name+'";'
-    var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
+    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 20000 * 1024 * 1024)
     db.transaction(function (tx) {
         tx.executeSql(comm5, [], function (tx, results) {
          console.log('done')
@@ -669,7 +669,7 @@ console.log(hours, min)
 
 //auto bill number
 var comm1 = 'SELECT num FROM BILLNUM;';
-var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 200 * 1024 * 1024);
+var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 200 * 1024 * 1024);
 
 db.transaction(function (tx) {
     tx.executeSql(comm1, [], function (tx, results) {
@@ -690,7 +690,7 @@ document.querySelector('#billNumber').addEventListener("change", function(e){
     //  search transaction database and then fill entries.
     var transac = '';
     var comm4 = "SELECT * FROM TRANSACTIONS WHERE BillNum='"+new_bnum.toString()+"';";
-    var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
+    var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
     db.transaction(function (tx) {
         tx.executeSql(comm4, [], function (tx, results) {
         
@@ -792,7 +792,7 @@ document.querySelector('#billNumber').addEventListener("change", function(e){
 
 //populate clients
 var command = 'SELECT Name FROM CLIENTS';
-var db = openDatabase('DATABASE/clients.db', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
+var db = openDatabase('WOODYFAMRS', '1.0', 'WF DATABASE', 200 * 1024 * 1024)
 db.transaction(function (tx) {
   tx.executeSql(command, [], function (tx, results) {
 
