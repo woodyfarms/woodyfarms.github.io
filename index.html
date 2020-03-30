@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WOODY FARMS BILLING</title>
+
+<style>
+
+
+.heading{
+height:30vh;
+vertical-align: middle;
+line-height: 30vh;
+color:#F2F5E6;
+font-size:4em;
+margin:0px auto;
+}
+
+.heading img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.options{
+display:flex;
+flex-direction: column;
+width:30%;
+margin:2% auto;
+}
+
+.options button{
+margin: 3%;
+border-radius: 10pt;
+height: 50px;
+font-family: serif;
+font-size: 1.2em;
+font-weight:lighter;
+}
+
+.options button:hover{
+background-color: #1776411F;
+color:black;	
+}
+
+.options button:focus{
+background-color: #1776419F;
+color:black;	
+}
+button:focus {outline:0;}
+</style>
+
+
+
+</head>
+<body>
+
+<div class='heading'>
+<img src='wflh.PNG' style='align:center;'>
+</div>
+<hr class='rule'>
+<br>
+<br>
+
+<div class='options'>
+<button id="newbill">Create New Bill</button>
+<button id="newclient">Register a New Client</button>
+<button id="viewbill">View Bill Summary</button>
+</div>
+<script>
+document.querySelector('#newbill').addEventListener('click', (e)=>{
+  window.open('newBill.html', '_self');
+})
+
+document.querySelector('#newclient').addEventListener('click', (e)=>{
+  window.open('newClient.html', '_self');
+})
+
+document.querySelector('#viewbill').addEventListener('click', (e)=>{
+  window.open('findTransactions.html', '_self')
+})
+</script>
+</body>
+</html>

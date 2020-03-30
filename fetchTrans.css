@@ -1,0 +1,311 @@
+
+@media print{
+    body{
+        width: 21cm;
+        }
+    
+    #printDiv{
+        display: block !important;
+        width: 21cm;
+    }
+    #printSummary{
+        display: none;
+        
+    }
+    #printSummDiv{
+        display:block !important;
+        margin: 3%;
+    }
+    .printDiv{
+        display: block !important;
+        width: 21cm;
+        margin: 3%; 
+        page-break-after: always;
+        }
+    #dateForm{
+        display:None;
+    }
+    #outputTable{
+        display:None;
+    }
+    .heading{
+        display:None;
+    }
+    #print{
+        display:None
+    }
+
+    .screenView{
+        display: None;
+    } 
+    #printDiv{
+        display: block !important;
+        
+    }
+
+    .title {
+        width: 100%;
+        display: block;
+        margin-top:0.5%;
+        margin-bottom: 0.5%;
+        font-size: 2.2em;
+        font-weight: bold;;
+        text-align: center;
+    }
+
+    .subtitle{
+        width:100%;
+        display: block;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .footer{
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    .footer hr{
+        width: 95%;
+        height: 2px;
+        border-width:0;
+        background-color:black;
+        color: black;
+    }
+
+    .bill_add{
+        display: block;
+        width: 55%;
+        float: left;
+    }
+
+    .date_time{
+        display: block;
+        width: 30%;
+        margin-right:3%;
+        float: right;
+    }
+
+    .gstin{
+        float: left;
+        display: block;
+        font-size: 0.75em;
+    }
+    .phnum{
+        float: right;
+        color: gray;
+        font-weight:bold;
+        font-size: 0.75em;
+        margin-right:3%;
+    }
+    .tnc{
+        display: block;
+        float:left;
+        width:65%;
+        text-align: left;
+        font-size: 0.70em;
+        padding-top:2%;
+        padding-bottom:1%;
+    }
+    .acc_table{
+        width: 40%;
+        text-align:left;
+        float: left;
+        font-size: 0.75em;
+    }
+
+    .acc_table table,.acc_table td{
+        border-collapse: collapse;
+        border:1px solid lightslategray;
+        padding: 3px;
+        text-align:center;
+    }
+table caption{
+  text-align:left
+}
+    .acc_table table{
+    float:left;
+    margin-left:3%;
+    border-collapse: collapse;
+    border: 2px solid lightslategray;
+    /* margin-bottom:1%; */
+    margin-right:3%;
+    }  
+    
+    .item_table_div{
+        display: block;
+        width:98%;
+        margin-right: 3%;
+        margin-top:17%;
+    }
+
+    .item_table{
+        font-size: 0.9em;
+        width:95%;
+        margin:1% auto;
+        margin-top: 20px;
+        margin-right: 3%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    .blankrow{
+        column-span: 8;
+    }
+    .noborder{
+        border-bottom-width: 0px;
+    }
+    .entry{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .sign{
+        float:right;
+        display:block;
+        text-align: center;
+        margin-top:3cm;
+        width:6cm;
+        margin-right:3%;
+    }
+    .sign_line{
+        width:6cm;
+        height:1px;
+        align-content: right;
+        border-width:0;
+    }
+
+    .summtable table{
+        border-collapse: collapse;
+        
+    }
+
+    .summtable td, .summtable th{
+        padding: 0.5cm;
+        text-align: center;
+    }
+    .summtable caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    .summtable{
+        margin-top: 5%;
+    }
+}
+
+@media screen{
+    #printSummary{
+        display: block;
+    }
+    #printSummDiv{
+    display: none;
+    }
+#printDiv{
+    display: none;
+}
+
+#dateForm{
+display: block;
+}
+#outputTable{
+    display: block;
+    width:70%;
+    margin:5% auto;
+    text-align: center;;
+}
+
+#dateForm{
+    width: 50%;
+    margin:1% auto;
+    font-size: 1em;
+}
+.heading {
+    height: 20vh;
+    vertical-align: middle;
+    line-height: 30vh;
+    color: #F2F5E6;
+    font-size: 4em;
+    margin: 0px auto;
+  }
+
+  .heading img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+  }
+
+  input,
+  select,
+  button {
+    width: 10%;
+    border-radius: 10pt;
+    height: 30px;
+    font-family: serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin: 1%;
+    padding: 1%;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    margin-top: 3%;
+
+  }
+
+  select {
+    width: 20%;
+    height: 40px;
+  }
+
+  input:focus,
+  select:focus {
+    outline: 0;
+    background-color: #1776411F;
+  }
+
+  button {
+    width: 40%;
+    background-color: #1776413F;
+    vertical-align: middle;
+    line-height: 11px;
+  }
+
+  button:hover {
+    background-color: #1776417F;
+  }
+
+  button:focus {
+    outline: 0;
+    background-color: #1776419F;
+  }
+
+  .trans_table{
+      width:90%;
+      margin: 0px auto;
+      text-align: center !important;
+      padding: 1%;
+      border-collapse: collapse;
+
+  }
+
+  td{
+      text-align: center;
+  }
+
+  table caption{
+      font-size: 1.5em;
+      font-weight: bold;
+  }
+  #print{
+    display: inline;
+      width:20%;
+  }
+  #printSummary{
+      display: inline;
+      width:20%;
+  }
+}

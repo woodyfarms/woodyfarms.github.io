@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Bill</title>
+
+  <style>
+  </style>
+
+<link rel="stylesheet" href="bill.css">
+</head>
+
+
+<body>
+
+
+<div class="screenView">
+
+  <div class='heading'>
+    <img src='wflh.PNG' style='align:center;'>
+  </div>
+  <hr class='rule'>
+  <br>
+  <span style='font-weight: bold'>Bill No. </span>
+
+  <input id='billNumber' , type='text' , name='billNumber'> <!-- Fill using a text file -->
+
+  <form id='billForm'>
+
+    <select id='date' , name='date' required>
+      <option value="" disabled selected>Date</option>
+      <option value="01"> 1 </option>
+      <option value="02"> 2 </option>
+      <option value="03"> 3 </option>
+      <option value="04"> 4 </option>
+      <option value="05"> 5 </option>
+      <option value="06"> 6 </option>
+      <option value="07"> 7 </option>
+      <option value="08"> 8 </option>
+      <option value="09"> 9 </option>
+      <option value="10">10</option>
+      <option value="11">11 </option>
+      <option value="12">12 </option>
+      <option value="13">13 </option>
+      <option value="14">14 </option>
+      <option value="15">15 </option>
+      <option value="16">16 </option>
+      <option value="17">17 </option>
+      <option value="18">18 </option>
+      <option value="19">19 </option>
+      <option value="20">20 </option>
+      <option value="21">21 </option>
+      <option value="22">22 </option>
+      <option value="23">23 </option>
+      <option value="24">24 </option>
+      <option value="25">25 </option>
+      <option value="26">26 </option>
+      <option value="27">27 </option>
+      <option value="28">28 </option>
+      <option value="29">29 </option>
+      <option value="30">30 </option>
+      <option value="31">31 </option>
+    </select>
+
+    <select id="month" , name="month" required>
+      <option value="" disabled selected>Month</option>
+      <option value="0">Jan </option>
+      <option value="1">Feb </option>
+      <option value="2">Mar </option>
+      <option value="3">Apr </option>
+      <option value="4">May </option>
+      <option value="5">Jun </option>
+      <option value="6">Jul </option>
+      <option value="8">Aug </option>
+      <option value="9">Sept </option>
+      <option value="10">Oct </option>
+      <option value="11">Nov </option>
+      <option value="12"> Dec</option>
+
+    </select>
+
+    <select id="year" , name="year" required>
+      <option value="" disabled selected>Year</option>
+      <option value="2020">2020 </option>
+      <option value="2021">2021 </option>
+      <option value="2022">2022 </option>
+    </select><br>
+
+
+    <select id="hours" , name="hours" required>
+      <option value="" disabled selected>Hrs</option>
+      <option value="01"> 01 </option>
+      <option value="02"> 02 </option>
+      <option value="03"> 03 </option>
+      <option value="04"> 04 </option>
+      <option value="05"> 05 </option>
+      <option value="06"> 06 </option>
+      <option value="07"> 07 </option>
+      <option value="08"> 08 </option>
+      <option value="09"> 09 </option>
+      <option value="10">10</option>
+      <option value="11">11 </option>
+      <option value="12">12 </option>
+    </select>
+
+    <select id='miniute' , name='miniutes' required>
+      <option value="" disabled selected>Min</option>
+      <option value="00">00</option>
+      <option value="01"> 01 </option>
+      <option value="02"> 02 </option>
+      <option value="03"> 03 </option>
+      <option value="04"> 04 </option>
+      <option value="05"> 05 </option>
+      <option value="06"> 06 </option>
+      <option value="07"> 07 </option>
+      <option value="08"> 08 </option>
+      <option value="09"> 09 </option>
+      <option value="10">10</option>
+      <option value="11">11 </option>
+      <option value="12">12 </option>
+      <option value="13">13 </option>
+      <option value="14">14 </option>
+      <option value="15">15 </option>
+      <option value="16">16 </option>
+      <option value="17">17 </option>
+      <option value="18">18 </option>
+      <option value="19">19 </option>
+      <option value="20">20 </option>
+      <option value="21">21 </option>
+      <option value="22">22 </option>
+      <option value="23">23 </option>
+      <option value="24">24 </option>
+      <option value="25">25 </option>
+      <option value="26">26 </option>
+      <option value="27">27 </option>
+      <option value="28">28 </option>
+      <option value="29">29 </option>
+      <option value="30">30 </option>
+      <option value="31">31 </option>
+      <option value="32"> 32 </option>
+      <option value="33"> 33 </option>
+      <option value="34"> 34 </option>
+      <option value="35"> 35 </option>
+      <option value="36"> 36 </option>
+      <option value="37"> 37 </option>
+      <option value="38"> 38 </option>
+      <option value="39"> 39 </option>
+      <option value="40">40</option>
+      <option value="41">41 </option>
+      <option value="42">42 </option>
+      <option value="43">43 </option>
+      <option value="44">44 </option>
+      <option value="45">45 </option>
+      <option value="46">46 </option>
+      <option value="47">47 </option>
+      <option value="48">48 </option>
+      <option value="49">49 </option>
+      <option value="50">50 </option>
+      <option value="51">51 </option>
+      <option value="52">52 </option>
+      <option value="53">53 </option>
+      <option value="54">54 </option>
+      <option value="55">55 </option>
+      <option value="56">56 </option>
+      <option value="57">57 </option>
+      <option value="58">58 </option>
+      <option value="59">59 </option>
+    </select>
+
+    <select id="ampm" , name="ampm" required>
+      <option value="AM">AM</option>
+      <option value="PM">PM</option>
+    </select>
+
+    <select id='client' required>
+      <!-- Dynamically add options from the client table -->
+      <option value="" disabled selected>Client Name</option>
+    </select> <br>
+
+    <input type='text' id='vehicleno' , placeholder='Vehicle No.', style="width: 40%" required>
+    <input type="text" id="grno", placeholder="GRNo.", style="width: 40%" required> <br>
+
+    <div class='itemInput_div'>
+      <div class="item">
+
+        <input list="hsncodes" placeholder='HSN Code' class="item_hsn ival" onKeyPress="return noenter()" required>
+        <datalist id="hsncodes">
+          <option value="4412">
+          <option value="4401">
+        </datalist>
+
+        <input list="products" placeholder='Item' class="item_names ival" onKeyPress="return noenter()" required>
+        <datalist id="products">
+          <option value="18mm Ply">
+          <option value="12mm Ply">
+          <option value="22mm Ply">
+          <option value="30mm Ply">
+        </datalist>
+
+        <input list="Length" placeholder='Length', style="width:12%", class="ival" onKeyPress="return noenter()" required>
+        <datalist id="Length">
+            <option value="1.44">
+            <option value="0.84">
+            <option value="2.44">
+        </datalist>
+
+        <input list="Width" placeholder='Width' style="width:12%" class="ival" onKeyPress="return noenter()" required>
+        <datalist id="Width">
+            <option value="1.44">
+            <option value="0.84">
+            <option value="2.44">
+        </datalist>
+
+
+        <input type='text' placeholder='No. of Pieces' class="ival" onKeyPress="return noenter()" required>
+
+        <input type='text' placeholder='Rate' class="item_rates ival" onKeyPress="return noenter()" required>
+
+
+        <button class="del_item" title="Delete this item"> X </button>
+      </div>
+    </div>
+
+
+    <br>
+    <button id="addItem"> Add New Item </button>
+    <br><br>
+    <button id="calculate"> Calculate </button>
+    <br>
+    <textarea placeholder='Amount' disabled id="amount"></textarea>
+    <br>
+    <button id="submit"> Submit & Print </button>
+
+  </form>
+
+</div>
+<div id="printView">
+</div>
+
+<div id="printView1">
+</div>
+
+<div id="printView2">
+</div>
+  <script src="newBill.js"></script>
+
+</body>
+
+</div>
+
+</html>
