@@ -162,6 +162,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
 
     var date_val =  document.querySelector('#date').value.toString();
     var month_val = (parseInt(document.querySelector('#month').value)+1)
+
     if(month_val<10){
         month_val='0'+month_val.toString();
     }
@@ -354,6 +355,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
      
          var infohead = document.createElement('div')
          var curr_state_code = state_codes[client_details['State'].toUpperCase()];
+         console.log(curr_state_code)
         if(curr_state_code<10){
             curr_state_code='0'+curr_state_code.toString();
         }
@@ -653,6 +655,13 @@ else{
     hours=hours.toString()
 }
 
+if(dt<10){
+    dt='0'+dt.toString()
+}
+else{
+    dt = dt.toString();
+}
+
 document.querySelector('#year').value=year;
 document.querySelector('#date').value=dt;
 document.querySelector('#month').value=month;
@@ -704,6 +713,7 @@ document.querySelector('#billNumber').addEventListener("change", function(e){
         var t_client = transac['ClientName']
         var t_vehicleno = transac['VehicleNo']
         var t_items = transac['Items']
+        var t_grno = transac['GRNo']
         var t_amount = transac['Amount'].toString()
 
         console.log(t_date, t_time, t_client, t_vehicleno, t_items, t_amount);
@@ -711,9 +721,10 @@ document.querySelector('#billNumber').addEventListener("change", function(e){
         document.querySelector('#client').value = t_client;
         document.querySelector('#vehicleno').value = t_vehicleno;
         document.querySelector('#amount').value = t_amount;
-
+        document.querySelector('#grno').value = t_grno;
         var date_elements = t_date.split('-');
-        document.querySelector('#date').value = date_elements[2];  
+        var dt = date_elements[2];
+        document.querySelector('#date').value = date_elements[2];
         document.querySelector('#year').value = date_elements[0];
         var month_map={
             'Jan':0,
@@ -729,7 +740,13 @@ document.querySelector('#billNumber').addEventListener("change", function(e){
             'Nov':10,
             'Dec':11
         };
-        document.querySelector('#month').value =  month_map[date_elements[1]];
+        mnth = date_elements[1];
+        if(mnth[0]=='0'){
+            mnth=mnth[1]
+        }
+        console.log(mnth)
+        mnth=(parseInt(mnth)-1).toString()
+        document.querySelector('#month').value =  mnth;
 
         time_elements = t_time.split(':')
         document.querySelector('#hours').value = time_elements[0];
